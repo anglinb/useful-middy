@@ -1,0 +1,25 @@
+{
+  "name": "useful-middy",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/anglinb/useful-middy.git"
+  },
+  "keywords": [
+    "middy",
+    "lambda",
+    "aws",
+    "nodejs"
+  ],
+  "author": "Brian Anglin <banglin@usc.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anglinb/useful-middy/issues"
+  },
+  "homepage": "https://github.com/anglinb/useful-middy#readme"
+}
