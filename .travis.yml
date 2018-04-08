@@ -19,4 +19,4 @@ branches:
     - /^v\d+\.\d+\.\d+$/
 
 script:
-  - DEBUG="*" npm test
+  - DEBUG="-babel,*" npm test
