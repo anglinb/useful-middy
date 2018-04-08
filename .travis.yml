@@ -1,25 +1,20 @@
 sudo: false
-
 language: node_js
-
 node_js:
-  - "8"
-
+- '8'
 notifications:
   disabled: true
-
 after_success:
-  - npm run travis-deploy-once "npm run semantic-release"
-
+- npm run travis-deploy-once "npm run semantic-release"
 before_install:
-  - npm install -g npm@5
-
+- npm install -g npm@5
 install:
-  - npm install
-
+- npm install
 branches:
   except:
-    - /^v\d+\.\d+\.\d+$/
-
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
 script:
-  - DEBUG="-babel,*" npm test
+- DEBUG="-babel,*" npm test
+env:
+  matrix:
+    secure: TuyCpcto6tKiOuoSC+19O7OH8n0bxgrdIIkPJl501nvg1WsILFSZsPdIbEcyECNyXCLvg3IqZjY9ZBnvrYGb4No1GvDJ5KhQTa3PhpKtrZNamTC70NrDS0V/jfW35XQvt8p4f6Vb/njpNiQvPgnEiKbKKEl3gFcTpgWDA5io7Sj5vHtISIDTeexmAoeTJS2oxUHX/WOrvzhvAJsWhLWatLU0FHumtOhGgDCAsK77n4XeTOgLLtVSb1gmVRGuflczboEWJ3EIu2tZzqGC5kBk0lW0hU9sQ4yBKBL04cnO2j0+jA5y1qvd69K6/l7nLYB2e8geHUXyQ1rBPqLw45FKgN2lb0iDlHRDbONAgfLR+dlt3Id42111KzBdJ2OiLjY/qIGOTLmTFG0egf+rjBBJdNksfof5kOZIc5moJLTrPE+lAD+zD2WE7uvJDWo6wM/Ek8u55r1MTuNxtQk/LjmUja2/jPI+Lfo2h0GELrcWnfaX1Pmsr0FakJW89DVDYprpxKyKgzwtcefuk6KSEL+huocIIS+FJS7CYePfqEYP7Y3wxVtDVS1l2CH34sJxQ8WWw+FS/65XoAAtP4HM39GFlHkkTkNBUqM/Cb7r4M8S+eMUC2w3H6lGghahCGmG2GAnLlGN/mUZAiNBG0AEtdF27qanyLnJzDLX3Tw7khsTD0U=
