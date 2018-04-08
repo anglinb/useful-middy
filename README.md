@@ -15,7 +15,7 @@ npm test
 ## Usage
 
 ```node
-const { jsonBodyParser } = require('userful-middy')
+const { jsonBodyParser } = require('useful-middy')
 const handler = middy(someHandler)
   .use(jsonBodyParser())
 
