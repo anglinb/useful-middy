@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "content-type": "^1.0.4",
+    "debug": "^3.1.0",
     "http-errors": "^1.6.3"
   }
 }
