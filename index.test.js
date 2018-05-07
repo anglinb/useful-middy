@@ -4,7 +4,8 @@ const createError = require('http-errors')
 const {
   jsonBodyParser,
   jsonErrorHandler,
-  ignoreCaseHeaders
+  ignoreCaseHeaders,
+  withDefaults,
 } = require('./')
 
 // I made a mistake about what modules I was exporting so I setup this smoke test
@@ -55,4 +56,23 @@ describe('exported modules', () => {
       expect(uncasedHeaders.get('aa')).toEqual('b')
     })
   })
+
+  describe('withDefaults', () => {
+    it('should allow defaults to be overridden', () => {
+      let defaults = {
+        a: 'b',
+        c: 'd',
+      }
+      let funcFactory = (config) => {
+        expect(config).toEqual({
+          a: 'b',
+          c: 'z'
+        })
+        return {}
+      }
+      let defaultedFuncFactory = withDefaults(funcFactory, defaults)
+      let func = defaultedFuncFactory({c: 'z'})
+    })
+  })
 })
+
