@@ -12,6 +12,11 @@
     "type": "git",
     "url": "https://github.com/anglinb/useful-middy.git"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/example"
+    ]
+  },
   "keywords": [
     "middy",
     "lambda",
@@ -28,6 +33,7 @@
     "jest": "^22.4.3",
     "middy": "^0.10.8",
     "semantic-release": "^15.1.5",
+    "strip-color": "^0.1.0",
     "travis-deploy-once": "^4.4.1"
   },
   "dependencies": {
