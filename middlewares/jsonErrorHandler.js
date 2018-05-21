@@ -13,9 +13,9 @@ module.exports = ({ exposeErrorKeys = false } = {}) => ({
         resp.errorDetails = handler.error.details
       }
 
-      // TODO: Allow enabling exposeErrorKeys
-      // Custom error key
-      // resp.errorKey = handler.error.errorKey || 'unknown_error'
+      if ( exposeErrorKeys ) {
+        resp.errorKey = handler.error.errorKey || 'unknown_error'
+      }
 
       handler.response = {
         statusCode: handler.error.statusCode,
