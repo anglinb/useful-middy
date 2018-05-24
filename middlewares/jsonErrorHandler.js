@@ -14,7 +14,7 @@ module.exports = ({ exposeErrorKeys = false } = {}) => ({
       }
 
       if ( exposeErrorKeys ) {
-        resp.errorKey = handler.error.errorKey || 'unknown_error'
+        resp.error_key = handler.error.errorKey || 'unknown_error'
       }
 
       handler.response = {

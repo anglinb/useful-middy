@@ -67,7 +67,7 @@ describe('jsonErrorHandler', () => {
       handler({}, {}, (_, response) => {
         expect(response).toEqual({
           statusCode: 422,
-          body: JSON.stringify({ error: 'Unprocessable Entity', errorKey: 'unknown_error' })
+          body: JSON.stringify({ error: 'Unprocessable Entity', error_key: 'unknown_error' })
         })
       })
     })
@@ -85,7 +85,7 @@ describe('jsonErrorHandler', () => {
       handler({}, {}, (_, response) => {
         expect(response).toEqual({
           statusCode: 422,
-          body: JSON.stringify({ error: 'Unprocessable Entity', errorKey: 'my_key_error' })
+          body: JSON.stringify({ error: 'Unprocessable Entity', error_key: 'my_key_error' })
         })
       })
     })
