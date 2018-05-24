@@ -12,6 +12,14 @@
     "type": "git",
     "url": "https://github.com/anglinb/useful-middy.git"
   },
+"release": {
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "breaking", "release": "major"}
+      ]
+    }
+},
   "jest": {
     "testPathIgnorePatterns": [
       "<rootDir>/example"
